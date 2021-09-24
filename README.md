@@ -9,5 +9,12 @@ Modify ``website`` and ``import.bib`` to your needs.
 
 ```
 cd website
-docker run --rm -it -v $HOME:$HOME -w $PWD -u $(id -u):$(id -g) davidfrantz/academic academic import --bibtex import.bib
+docker run \
+    --rm \
+    -it \
+    -v $HOME:$HOME \
+    -w $PWD \
+    -u $(id -u):$(id -g) \
+    davidfrantz/academic \
+    academic import --bibtex import.bib
 ```
